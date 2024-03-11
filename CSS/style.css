@@ -40,8 +40,6 @@ header {
 main {
   background-color: var(--fundo-formulario);
   position: absolute;
-  width: 80%;
-  height: 90%;
   top: 7VH;
   left: 10vw;
 }
@@ -50,7 +48,52 @@ main {
     text-transform: uppercase;
     text-align: center;
     padding: 5px;
-    border-bottom: 1px groove var(--subtitulo-borda);
+    border-bottom: 1px groove var(--subtitulo-borda);  
+}
+p {
+    font-family: var(--font1);
+    padding-left: 30px;
+    font-style: normal ;
+}
+
+.destaque {
+    font-size: 2em;
+    font-style: bold;
+    padding-top: 30px;
+    padding-bottom: 15px;
+} 
+form {
+    padding-left: 30px;
+}
+label {
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+input {
+    border-bottom: 1px dotted var(--requerido);
+    padding-bottom: 10px;
     
 }
-    
+
+textarea {
+    border: 1px dotted var(--requerido);
+    width: 400px;
+    height: 100px;
+}
+
+select {
+    border: 1px dotted var(--requerido);
+}
+.requerido {
+    color: var(--requerido);
+}
+.inline {
+    display: inline-block;
+}
+
+.col2 {
+    position: relative;
+    left: 200px;
+    top: -230px;
+}

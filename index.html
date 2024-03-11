@@ -1,21 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastre o seu carro</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
-</head>
-<body>
-    <header>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
         <p>Cadastre o seu veículo para vendar mais rápido</p>
-    </header>
-    <main>
-        <section>
-            <h2 class="subtitulo">formulário</h2>
-        </section>
-
+      </header>
+      <section class="form-container">
+        <div class="sub-header">
+          <h2 class="subtitulo">formulário</h2>
+          <p class="destaque">É muito fácil vender !!</p>
+          <p>Favor preencher os dados abaixo, obrigado!</p>
+        </div>
+        <form class="input" action="#" method="post">
+          <!--  -->
+          <!--  Título anúncio  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="titulo"
+              >Título do anûncio <span class="requerido">*</span></label
+            >
+            <input
+              type="text"
+              name="titulo"
+              placeholder="Uma descrição do carro ate 100 caracteres"
+              required
+              maxlength="100"
+              autocomplete="off"
+              size="102px"
+              spellcheck="true"
+            />
+          </div>
+          <!--  -->
+          <!--  Preço  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="preco">Preço <span class="requerido">*</span></label>
+            <input
+              type="number"
+              name="preco"
+              placeholder="Em reais"
+              required
+              autocomplete="off"
+              maxlength="8"
+              size="10px"
+            />
+          </div>
+          <!--  -->
+          <!--  Descrição  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="descricao"
+              >Descrição <span class="requerido">*</span></label
+            >
+            <textarea name="descricao" required>Descreva seu veículo</textarea>
+          </div>
+          <!--  -->
+          <!--  Marca  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="marca">Marca <span class="requerido">*</span></label>
+            <input type="text" name="marca" list="selecao" />
+            <datalist id="selecao">
+              <option value="Audi"></option>
+              <option value="BMW"></option>
+              <option value="FIAT"></option>
+              <option value="FORD"></option>
+              <option value="GM"></option>
+              <option value="VW"></option>
+            </datalist>
+          </div>
+          <!--  -->
+          <!--  Modelo  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="modelo">Modelo <span class="requerido">*</span></label>
+            <input
+              type="text"
+              name="modelo"
+              placeholder="Descreva o modelo"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <!--  -->
+          <!--  Kilomotragem  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="km"
+              >Kilometragem <span class="requerido">*</span></label
+            >
+            <input
+              type="text"
+              name="KM"
+              placeholder="Digite a Kilometragem atual"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <!--  -->
+          <!--  Data de Compra  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="compra"
+              >Data da compra <span class="requerido">*</span></label
+            >
+            <input type="date" name="compra placeholder="dd/mm/aa" required
+            autocomplete="off" />
+          </div>
+          <!--  -->
+          <!--  Câmbio  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="cambio"
+              >Tipo de câmbio <span class="requerido">*</span></label
+            >
+            <input type="radio" value="manual" name="cambio" />
+            <label class="inline" for="manual">Manual</label>
+            <input type="radio" value="automatico" name="cambio" />
+            <label class="inline" for="automatico">Automático</label>
+          </div>
+          <!--  -->
+          <!--  Opcionais  -->
+          <!--  -->
+          <div class="input-box">
+            <label for="opcionais"
+              >Selecione os opcionais: <span class="requerido">*</span></label
+            >
+            <!--  Primeira coluna  -->
+            <div class="lista">
+              <ul>
+                 <!--  Airbag -->
+                <li>
+                  <input type="checkbox" value="airbag" name="opcionais[]" />
+                  <label for="airbag">Airbag</label>
+                </li>
+                <!--  Alarme  -->
+                <li>
+                  <input type="checkbox" value="alarme" name="opcionais[]" />
+                  <label for="alarme">Alarme</label>
+                </li>
+                <!--  Trava elétrica  -->
+                <li>
+                  <input type="checkbox" value="trava" name="opcionais[]" />
+                  <label for="trava">Trava elétrica</label>
+                </li>
+                <!--  Roda   -->
+                <li>
+                  <input type="checkbox" value="roda" name="opcionais[]" />
+                  <label for="roda">Roda esportiva</label>
+                </li>
+              </ul>
+            </div>
+            <!--  Segunda coluna  -->
+            <div class="lista">
+              <ul>
+                <!--  Couro  -->
+                <li>
+                  <input type="checkbox" value="couro" name="opcionais[]" />
+                  <label for="couro">Bancos de couro</label>
+                </li>
+                <!--  LED  -->
+                <li>
+                  <input type="checkbox" value="led" name="opcionais[]" />
+                  <label for="led">Farois de LED</label>
+                </li>
+                <!--  Frenagem -->
+                <li>
+                  <input type="checkbox" value="frenagem" name="opcionais[]" />
+                  <label for="frenagem"
+                    >Assistente de frenagem</label
+                  >
+                </li>
+                <!--  Faixa  -->
+                <li>
+                  <input type="checkbox" value="faixa" name="opcionais[]" />
+                  <label for="faixa">Assistente de faixas</label>
+                </li>
+              </ul>
+            </div>
+            <!--  -->
+            <!--  Arquivos  -->
+            <!--  -->
+            <div class="input-box">
+              <label for="arquvivo"
+                >Anexe seu arquivo <span class="requerido">*</span></label
+              >
+              <input class="" type="file" name="arquivo" placeholder="Máximo de 8
+              Gb" required" />
+            </div>
+          </form>
+          <footer class="develop">
+            <p>Desenvolvido por <a href="www.deeptech.com.br">Deeptech Serviços</a></p>
+          </footer>
+      </section>
     </main>
-</body>
+  </body>
 </html>
