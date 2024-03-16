@@ -1,99 +1,156 @@
 * {
-    padding: 0px;
-    border: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 :root {
-    --fundo-cabecalho: #2424dd;
-    --fundo: #ece5e5;
-    --fundo-formulario: #fff;
-    --requerido: red;
-    --borda: #000;
-    --subtitulo: #8a8af3;
-    --subtitulo-borda: rgba(36, 36, 222, 0.096);
-    --letra-cabecalho: #fff;
-    --font1: Arial, Helvetica, sans-serif;
-    --font2: 'Courier New', Courier, monospace, Helvetica, sans-serif;
+  --fundo-cabecalho: #2424dd;
+  --fundo: #f0ebf8;
+  --fundo-formulario: #fff;
+  --requerido: red;
+  --borda: #000;
+  --subtitulo: #8a8af3;
+  --subtitulo-borda: rgba(36, 36, 222, 0.096);
+  --letra-cabecalho: #333;
+  --font1: Arial, Helvetica, sans-serif;
+  --font2: "Courier New", Courier, monospace, Helvetica, sans-serif;
 }
 
 body {
-    background-color: var(--fundo);
-    max-width: 100vw;
-    max-height: 100vh;
-
+  background-color: var(--fundo);
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
-header {
-    background-color: var(--fundo-cabecalho);
-    width: 100vw;
-    height: 10vh;
-    font-family: var(--font2);
-    font-size: 1em;
-    font-weight: bolder;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--letra-cabecalho);
-    padding: 20px;
-    text-align: center;
 }
 
-main {
-  background-color: var(--fundo-formulario);
-  position: absolute;
-  top: 7VH;
-  left: 10vw;
-}
-.subtitulo {
-    color: var(--subtitulo) ;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 5px;
-    border-bottom: 1px groove var(--subtitulo-borda);  
-}
+label,
 p {
-    font-family: var(--font1);
-    padding-left: 30px;
-    font-style: normal ;
+    color: #444;
 }
 
-.destaque {
-    font-size: 2em;
-    font-style: bold;
-    padding-top: 30px;
-    padding-bottom: 15px;
-} 
-form {
-    padding-left: 30px;
-}
-label {
-    display: block;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
 input {
-    border-bottom: 1px dotted var(--requerido);
-    padding-bottom: 10px;
-    
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="text"],
+input[type="date"], 
+input[type="number"], 
+input[type="file"],
+textarea {
+    width: 400px;
 }
 
 textarea {
-    border: 1px dotted var(--requerido);
-    width: 400px;
+    padding: 10px 5px;
+}
+ 
+.header {
     height: 100px;
+    background-image: url(/Projeto-venda-carro/img/venda-banner.png);
+    border: 2px solid red;
+    position: relative;
+}
+
+.header p {
+    color: #df0c0c;
+    text-align: center;
+        font-weight: bolder;
+    font-size: 1.4em;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+}
+/* .header {
+  background-color: var(--fundo-cabecalho);
+  height: 5vh;
+}
+
+header p {
+  font-family: var(--font2);
+  font-size: 1.4em;
+  font-weight: bolder;
+  color: var(--letra-cabecalho);
+  text-align: center;
+  padding-top: 45px;
+}
+
+.form-container {
+  background-color: var(--fundo-formulario);
+  border: 2px solid black;
+  max-width: 800px;
+  min-height: 1800px;
+  margin: 0 auto;
+  padding: 200px;
+} */
+
+/* .subtitulo {
+  color: var(--subtitulo);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 1px groove var(--subtitulo-borda);
+}
+
+p {
+  font-family: var(--font1);
+  padding-left: 30px;
+  font-style: normal;
+}
+
+.destaque {
+  font-size: 2em;
+  font-style: bold;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+form {
+  padding-left: 30px;
+}
+
+label {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+input {
+  border-bottom: 1px dotted var(--requerido);
+  padding-bottom: 10px;
+}
+
+textarea {
+  border: 1px dotted var(--requerido);
+  width: 400px;
+  height: 100px;
 }
 
 select {
-    border: 1px dotted var(--requerido);
+  border: 1px dotted var(--requerido);
 }
+
 .requerido {
-    color: var(--requerido);
+  color: var(--requerido);
 }
+
 .inline {
-    display: inline-block;
+  display: inline-block;
 }
 
 .col2 {
-    position: relative;
-    left: 200px;
-    top: -230px;
-}
+  position: relative;
+  left: 200px;
+  top: -230px;
+} */
