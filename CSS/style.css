@@ -1,3 +1,6 @@
+/*  */
+/*  --- Zerando parâmetros --- */
+/*  */
 * {
   padding: 0px;
   border: 0px;
@@ -5,152 +8,186 @@
   box-sizing: border-box;
 }
 
+/*  */
+/*  --- Definindo variáveis --- */
+/*  */
 :root {
-  --fundo-cabecalho: #2424dd;
-  --fundo: #f0ebf8;
-  --fundo-formulario: #fff;
-  --requerido: red;
+  --fundo-cabecalho: #ccccccc7;
+  --fundo-formulario: #e4aeae9d;
+  --destaque: #df0c0c;
   --borda: #000;
-  --subtitulo: #8a8af3;
-  --subtitulo-borda: rgba(36, 36, 222, 0.096);
+  --hover: #dddde0;
   --letra-cabecalho: #333;
   --font1: Arial, Helvetica, sans-serif;
   --font2: "Courier New", Courier, monospace, Helvetica, sans-serif;
 }
 
+/*  */
+/*  --- fundo e responsividade --- */
+/*  */
 body {
   background-color: var(--fundo);
   max-width: 100vw;
   max-height: 100vh;
 }
 
+/*  */
+/*  --- definindo cor cabeçalhos --- */
+/*  */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    color: var(--letra-cabecalho);
+  color: var(--letra-cabecalho);
 }
 
-label,
-p {
-    color: #444;
-}
-
-input {
-    border: none;
-    border-bottom: 1px solid #ccc;
-}
-
+/*  */
+/*  --- delimitando largura campos de input --- */
+/*  */
 input[type="text"],
-input[type="date"], 
-input[type="number"], 
+input[type="date"],
+input[type="number"],
 input[type="file"],
 textarea {
-    width: 400px;
+  width: 400px;
 }
 
+/*  */
+/*  --- delimitando espacamento campos descrição --- */
+/*  */
 textarea {
-    padding: 10px 5px;
+  padding: 10px 5px;
+  border: 1px solid var(--borda);
 }
- 
+
+/*  */
+/*  --- definindo o cabeçalho e importando a imagem de fundo--- */
+/*  */
 .header {
-    height: 100px;
-    background-image: url(/Projeto-venda-carro/img/venda-banner.png);
-    border: 2px solid red;
-    position: relative;
+  height: 100px;
+  background-image: url(/Projeto-venda-carro/img/venda-banner.png);
+  border: 2px solid var(--destaque);
+  position: relative;
 }
 
+/*  */
+/*  --- definindo o parágrafo do cabeçalho --- */
+/*  */
 .header p {
-    color: #df0c0c;
-    text-align: center;
-        font-weight: bolder;
-    font-size: 1.4em;
-    background-color: #ccc;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    
-}
-/* .header {
-  background-color: var(--fundo-cabecalho);
-  height: 5vh;
-}
-
-header p {
-  font-family: var(--font2);
-  font-size: 1.4em;
-  font-weight: bolder;
-  color: var(--letra-cabecalho);
-  text-align: center;
-  padding-top: 45px;
-}
-
-.form-container {
-  background-color: var(--fundo-formulario);
-  border: 2px solid black;
-  max-width: 800px;
-  min-height: 1800px;
-  margin: 0 auto;
-  padding: 200px;
-} */
-
-/* .subtitulo {
-  color: var(--subtitulo);
-  text-transform: uppercase;
+  color: var(--destaque);
   text-align: center;
   padding: 5px;
-  border-bottom: 1px groove var(--subtitulo-borda);
+  font-weight: bolder;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  background-color: var(--fundo-cabecalho);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*  */
+/*  --- definindo o fundo do formulário --- */
+/*  */
+.form-container {
+  background-color: var(--fundo-formulario);
+  width: 80vw;
+  height: auto;
+  margin: 50px auto;
+}
+
+/*  */
+/*  --- definições do cabeçalho do formulário --- */
+/*  */
+.sub-header {
+  text-align: center;
+}
+
+.sub-header h2 {
+  border-bottom: 1px solid var(--destaque);
+  height: 45px;
+  line-height: 45px;
+  text-transform: capitalize;
+}
+
+.sub-header p {
+  display: inline;
+  line-height: 45px;
+}
+
+/*  */
+/*  --- definindo espaçamentos dos campos de dados --- */
+/*  */
+.input-box {
+  padding: 20px 20px;
+}
+
+/*  */
+/*  --- cor do destaque de campo requerido --- */
+/*  */
+.requerido {
+  color: var(--destaque);
+}
+
+/*  */
+/*  --- colocando descrição e entrada do dado um abaaixo do outro --- */
+/*  */
+.block {
+  display: block;
+  padding: 5px;
+  margin-top: 5px;
+  border-bottom: 1px solid var(--borda);
+  background-color: transparent;
+  cursor: pointer;
 }
 
 p {
-  font-family: var(--font1);
-  padding-left: 30px;
-  font-style: normal;
-}
-
-.destaque {
-  font-size: 2em;
-  font-style: bold;
-  padding-top: 30px;
-  padding-bottom: 15px;
-}
-form {
-  padding-left: 30px;
-}
-
-label {
-  display: block;
-  padding-top: 30px;
   padding-bottom: 10px;
 }
 
-input {
-  border-bottom: 1px dotted var(--requerido);
-  padding-bottom: 10px;
+/*  */
+/*  --- definições dos opicionais e formaatação --- */
+/*  */
+.options-box {
+  display: inline;
+  padding: 20px 20px;
 }
 
-textarea {
-  border: 1px dotted var(--requerido);
-  width: 400px;
-  height: 100px;
+.options-box p,
+li {
+  padding-left: 20px;
 }
 
-select {
-  border: 1px dotted var(--requerido);
+.lista {
+  list-style: none;
+  columns: 3;
 }
 
-.requerido {
-  color: var(--requerido);
+
+/*  */
+/*  --- botões de ação --- */
+/*  */
+.btn {
+  padding: 10px;
+  margin-right: 20px;
+  border: 1px solid var(--borda);
+  border-radius: 5px;
+  
 }
 
-.inline {
-  display: inline-block;
+.btn:hover {
+  background-color: var(--hover);
+  box-shadow: 1px 1px 10px 2px var(--destaque);
+
 }
 
-.col2 {
-  position: relative;
-  left: 200px;
-  top: -230px;
-} */
+/*  */
+/*  --- rodapé do formulário --- */
+/*  */
+.developer {
+  padding-top: 50px;
+  text-align: center;
+}

@@ -10,7 +10,7 @@
   <body>
     <main>
       <header class="header">
-        <p>Cadastre o seu veículo para vendar mais rápido</p>
+        <p>Cadastre o seu veículo para vender mais rápido</p>
       </header>
       <section class="form-container">
         <div class="sub-header">
@@ -18,7 +18,7 @@
           <p class="destaque">É muito fácil vender !!</p>
           <p>Favor preencher os dados abaixo, obrigado!</p>
         </div>
-        <form class="input" action="#" method="post">
+        <form  action="#" method="post">
           <!--  -->
           <!--  Título anúncio  -->
           <!--  -->
@@ -29,6 +29,7 @@
             <input
               type="text"
               name="titulo"
+              class="block"
               placeholder="Uma descrição do carro ate 100 caracteres"
               required
               maxlength="100"
@@ -45,6 +46,7 @@
             <input
               type="number"
               name="preco"
+              class="block"
               placeholder="Em reais"
               required
               autocomplete="off"
@@ -59,14 +61,14 @@
             <label for="descricao"
               >Descrição <span class="requerido">*</span></label
             >
-            <textarea name="descricao" required>Descreva seu veículo</textarea>
+            <textarea name="descricao" class="block" required>Descreva seu veículo</textarea>
           </div>
           <!--  -->
           <!--  Marca  -->
           <!--  -->
           <div class="input-box">
             <label for="marca">Marca <span class="requerido">*</span></label>
-            <input type="text" name="marca" list="selecao" />
+            <input type="text" name="marca"  class="block" placeholder="Selecione a marca do"  list="selecao" />
             <datalist id="selecao">
               <option value="Audi"></option>
               <option value="BMW"></option>
@@ -84,6 +86,7 @@
             <input
               type="text"
               name="modelo"
+              class="block"
               placeholder="Descreva o modelo"
               required
               autocomplete="off"
@@ -99,6 +102,7 @@
             <input
               type="number"
               name="KM"
+              class="block"
               placeholder="Digite a Kilometragem atual"
               required
               autocomplete="off"
@@ -111,31 +115,31 @@
             <label for="compra"
               >Data da compra <span class="requerido">*</span></label
             >
-            <input type="date" name="compra placeholder="dd/mm/aa" required
+            <input type="date" 
+            name="compra" 
+            class="block"
+             placeholder="dd/mm/aa" 
+             required
             autocomplete="off" />
           </div>
           <!--  -->
           <!--  Câmbio  -->
           <!--  -->
           <div class="input-box">
-            <label for="cambio"
-              >Tipo de câmbio <span class="requerido">*</span></label
-            >
-            <input type="radio" value="manual" name="cambio" />
-            <label class="inline" for="manual">Manual</label>
-            <input type="radio" value="automatico" name="cambio" />
-            <label class="inline" for="automatico">Automático</label>
+            <p>Tipo de câmbio <span class="requerido">*</span></p>
+            <input type="radio" name="gear" id="manual">
+            <label for="manual">Manual</label>
+            <input type="radio" name="gear" id="automatic">
+            <label for="automatic">Automático</label>
           </div>
           <!--  -->
           <!--  Opcionais  -->
           <!--  -->
-          <div class="input-box">
-            <label for="opcionais"
-              >Selecione os opcionais: <span class="requerido">*</span></label
-            >
+          <div class="options-box">   
+            <p>Selecione os opcionais: <span class="requerido">*</span></p>
             <!--  Primeira coluna  -->
-            <div class="lista">
-              <ul>
+            <div>
+              <ul class="lista ">
                  <!--  Airbag -->
                 <li>
                   <input type="checkbox" value="airbag" name="opcionais[]" />
@@ -156,11 +160,6 @@
                   <input type="checkbox" value="roda" name="opcionais[]" />
                   <label for="roda">Roda esportiva</label>
                 </li>
-              </ul>
-            </div>
-            <!--  Segunda coluna  -->
-            <div class="lista">
-              <ul>
                 <!--  Couro  -->
                 <li>
                   <input type="checkbox" value="couro" name="opcionais[]" />
@@ -192,11 +191,15 @@
               <label for="arquvivo"
                 >Anexe seu arquivo <span class="requerido">*</span></label
               >
-              <input class="" type="file" name="arquivo" placeholder="Máximo de 8
+              <input class="block" type="file" name="arquivo" placeholder="Máximo de 8
               Gb" required" />
             </div>
+            <div class="input-box">
+              <input class="btn" type="submit" value="Enviar" />
+              <input class="btn" type="reset" value="Limpar" />
+            </div>
           </form>
-          <footer class="develop">
+          <footer class="developer">
             <p>Desenvolvido por <a href="www.deeptech.com.br">Deeptech Serviços</a></p>
           </footer>
       </section>
