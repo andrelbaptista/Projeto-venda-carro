@@ -51,7 +51,7 @@ input[type="date"],
 input[type="number"],
 input[type="file"],
 textarea {
-  width: 400px;
+  width: 60vw;
 }
 
 /*  */
@@ -88,6 +88,13 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 800px) {
+  .header p {
+    font-size: 1.0em;
+  }
+}
+
 
 /*  */
 /*  --- definindo o fundo do formulário --- */
@@ -164,6 +171,12 @@ li {
 .lista {
   list-style: none;
   columns: 3;
+}
+
+@media screen and (max-width: 800px) {
+  .lista {
+    columns: 2;
+  }
 }
 
 
